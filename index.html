@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Alaram</title>
+        <link rel="stylesheet" href="Alaram_css.css">
+    </head>
+    <body>
+        <div id="alaram_container">
+            <header>
+                <h1></h1>
+                <div id="set_alaram">
+                    <h2>
+                        <input type="number" id="hours" min="0" max="24" value="0" placeholder="hours">:
+                        <input type="number" id="minutes" min="0" max="60" value="0" placeholder="minutes">:
+                        <input type="number" id="seconds" min="0" max="60" value="0" placeholder="seconds">
+                     </h2>
+                    <button id="created">Set Alaram</button>
+                </div>
+            </header>
+            <section>
+                <h3>Alarams</h3>
+                <ul id="alarams">
+                    <!-- <li>
+                        <p></p>
+                        <button>delete</button>
+                    </li> -->
+                </ul>
+            </section>
+        </div>
+        <script type="text/javascript" src="Alaram_js.js"></script>
+    </body>
+</html>

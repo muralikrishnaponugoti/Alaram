@@ -1,0 +1,47 @@
+#alaram_container{
+    margin-left:30rem;
+    width:30rem;
+    height:auto;
+    padding:2rem;
+    border:2px solid black;
+    border-radius:2rem;
+   }
+   header{
+        display:flex;
+        flex-direction: column;
+        width:100%;
+        height:auto;
+        align-items: center;
+    }
+    #set_alaram{
+        display:flex;
+        width:100%;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+    button{
+        height:2rem;
+        border-radius: 4rem;
+    }
+    input{
+        width:2.5rem;
+        height:2rem;
+        font-size: x-large;
+    }
+    #alarams li{
+        display:flex;
+        justify-content: space-between;
+        width:100%
+    }
+    ul{
+        list-style: none;
+        padding:0px;
+        margin:0px;
+        font-weight: 700;
+    }
+    li button{
+         color:white;
+         background-color:rgb(196, 77, 77);
+         border:none;
+
+    }
