@@ -18,7 +18,7 @@ function deleteAlaram(code){
         console.log(code);
         if(alaram.code===code){
             console.log('called');
-            alaramsList.splice(alaramsList.indexOf(alaram,1));
+            alaramsList.splice(alaramsList.indexOf(alaram),1);
             showNotification('alram deleted secussfully');
             displayAlaramsList('call from delete');
             return;
