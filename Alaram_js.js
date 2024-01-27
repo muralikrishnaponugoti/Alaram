@@ -50,13 +50,32 @@ document.addEventListener('click',function(event){
     let seconds_stamp=document.getElementById('seconds');
     let target=event.target;
     if(target.id=='created'){
-         const alaram={
-             stamp:(hours_stamp.value<10 ? '0':'')+hours_stamp.value.toString() +":"+ (minutes_stamp.value<10 ? '0':'')+minutes_stamp.value.toString() +":"+ (seconds_stamp.value<10 ? '0':'')+seconds_stamp.value.toString(),
-             code:Date.now().toString(),
-             hours:hours_stamp.value.toString(),
-             minutes:minutes_stamp.value.toString(),
-             seconds:seconds_stamp.value.toString()
-         }
+         if(parseInt(hours_stamp.value)>23 || parseInt(hours_stamp.value)<0)
+        {
+            alert('hours value should be between 0 to 23');
+            return;
+        }
+        else
+            if(parseInt(minutes_stamp.value)>59 || parseInt(minutes_stamp.value)<0)
+            {
+                alert('minutes value should be between 0 to 59'); 
+                return;
+            }
+            else
+                if(parseInt(seconds_stamp)>59)
+                {
+                    alert('seconds value should be between 0 to 59');
+                    return;
+                }
+                else{
+                    const alaram={
+                        stamp:(hours_stamp.value<10 ? '0':'')+hours_stamp.value.toString() +":"+ (minutes_stamp.value<10 ? '0':'')+minutes_stamp.value.toString() +":"+ (seconds_stamp.value<10 ? '0':'')+seconds_stamp.value.toString(),
+                        code:Date.now().toString(),
+                        hours:hours_stamp.value.toString(),
+                        minutes:minutes_stamp.value.toString(),
+                        seconds:seconds_stamp.value.toString()
+                    }
+                }
          if(alaram){
             alaramsList.push(alaram);
             displayAlaramsList('call from creation');
